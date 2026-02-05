@@ -87,10 +87,11 @@ void OnStart() {
 }
 ```
 
-6. Notas Técnicas para Compilación
-Plataforma: Windows x64.
-Configuración VC++: * Desactivar Encabezados Precompilados en archivos .c de CLIPS.
-Configurar Compilar como código C (/TC) para el núcleo del motor.
-Definir _CRT_SECURE_NO_WARNINGS en el preprocesador.
-Desactivar Comprobaciones SDL (/sdl-) para compatibilidad con código C legado.
-Desarrollado por: Pedro Escudero Murcia (2026)
+# 6. Notas Técnicas para Compilación
+* Plataforma: Windows x64.
+* Configuración VC++: * Desactivar Encabezados Precompilados en archivos .c de CLIPS.
+* Configurar Compilar como código C (/TC) para el núcleo del motor.
+* Definir _CRT_SECURE_NO_WARNINGS en el preprocesador.
+* Desactivar Comprobaciones SDL (/sdl-) para compatibilidad con código C legado.
+
+**Desarrollado por: Pedro Escudero Murcia (2026)**
