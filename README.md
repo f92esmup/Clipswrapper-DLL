@@ -78,3 +78,62 @@ ClipsGetStr(env, "?*v*", res, 10); // Res ahora contiene "100"
 * **Configuración:** Debe compilarse exclusivamente en **x64**.
 * **Archivos CLIPS:** Todos los archivos `.c` de la librería original deben tener desactivada la opción de "Encabezados Precompilados" y estar configurados como "Compilar como código C (/TC)".
 * **Flags de Preprocesador:** Se requiere `_CRT_SECURE_NO_WARNINGS` para permitir el uso de funciones de manejo de strings estándar de C.
+
+## 6. Formatos de Comunicación (I/O)
+
+Para garantizar una integración estable, el intercambio de datos debe seguir estas reglas de formato:
+
+### A. Entrada (MQL5  Wrapper)
+
+El Wrapper espera cadenas **Unicode (UTF-16)**. Sin embargo, CLIPS internamente trabaja con tipos de datos específicos. Debes formatear tus strings en MQL5 según el tipo de destino:
+
+| Tipo en CLIPS | Formato en MQL5 | Ejemplo de Comando |
+| --- | --- | --- |
+| **Símbolo** | Texto sin comillas | `"(assert (estado abierto))"` |
+| **String** | Texto con comillas escapadas | `"(assert (mensaje \"Operación exitosa\"))"` |
+| **Integer** | Número sin decimales | `StringFormat("(assert (id %d))", 123)` |
+| **Float** | Número con decimales | `StringFormat("(assert (precio %.5f))", 1.1050)` |
+| **Multifield** | Valores separados por espacio | `"(assert (datos 10 20.5 activo))"` |
+
+> **Nota:** Para inyectar variables de MQL5, usa siempre `StringFormat` o la concatenación `+` para construir el comando completo antes de enviarlo a `ClipsEval`.
+
+### B. Salida (Wrapper  MQL5)
+
+La recuperación de datos mediante `ClipsGetStr` es el punto más crítico. El Wrapper **no crea** el string, sino que **llena** uno existente.
+
+1. **Pre-asignación obligatoria:** MQL5 debe reservar memoria para el buffer antes de la llamada. Si el buffer es menor que el resultado de CLIPS, el texto se truncará.
+```cpp
+string buffer;
+StringInit(buffer, 100, ' '); // Reserva 100 caracteres
+
+```
+
+
+2. **Serialización de Listas:** Si pides un valor que en CLIPS es un `multifield`, el Wrapper lo devolverá como una cadena única donde cada elemento está separado por un **espacio en blanco**.
+* *Resultado en CLIPS:* `(10 20.5 "Ok")`
+* *Recibido en MQL5:* `"10 20.500000 Ok"`
+
+
+3. **Tipos Numéricos:** Los números se devuelven siempre convertidos a su representación en string (ej: `10` o `27.500000`).
+
+---
+
+## 7. Ejemplo de Flujo Completo de Datos
+
+```cpp
+// 1. Preparar entrada (MQL5)
+double rsi = 70.5;
+string comando = StringFormat("(assert (indicador (nombre rsi) (valor %f)))", rsi);
+
+// 2. Enviar a la DLL
+ClipsEval(env, comando);
+ClipsEval(env, "(run)");
+
+// 3. Preparar salida (MQL5)
+string respuesta;
+StringInit(respuesta, 50, ' '); // Espacio suficiente para la respuesta
+
+// 4. Recuperar resultado
+ClipsGetStr(env, "(find-all-facts ((?f señal)) TRUE)", respuesta, 50);
+
+```
