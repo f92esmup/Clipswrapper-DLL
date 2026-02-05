@@ -24,10 +24,11 @@ std::stringstream clips_output_stream;
 extern "C" {
     // 1. QueryRouter ahora devuelve bool y acepta un parámetro de contexto
     bool QueryRouter(Environment* env, const char* logicalName, void* context) {
-        if (strcmp(logicalName, "stdout") == 0 ||
-            strcmp(logicalName, "wtrace") == 0 ||
-            strcmp(logicalName, "werror") == 0) return true;
-        return false;
+        //if (strcmp(logicalName, "stdout") == 0 ||
+        //    strcmp(logicalName, "wtrace") == 0 ||
+        //    strcmp(logicalName, "werror") == 0) return true;
+        //return false;
+		return true; // Capturamos todo para mayor flexibilidad
     }
     // 2. WriteRouter ahora acepta un parámetro de contexto
     void WriteRouter(Environment* env, const char* logicalName, const char* str, void* context) {
