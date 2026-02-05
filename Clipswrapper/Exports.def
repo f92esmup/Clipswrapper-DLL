@@ -5,3 +5,4 @@ EXPORTS
     ClipsEval      @3
     ClipsGetStr    @4
     DeinitClips    @5
+    ClipsGetOutput @6

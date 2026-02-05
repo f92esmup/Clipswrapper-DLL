@@ -3,5 +3,5 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
-  <Project Path="Clipswrapper/Clipswrapper.vcxproj" />
+  <Project Path="Clipswrapper/Clipswrapper.vcxproj" Id="7b4d8060-ddae-4939-b914-5a50d3d93187" />
 </Solution>
