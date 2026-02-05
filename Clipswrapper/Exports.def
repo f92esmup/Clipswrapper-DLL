@@ -1,4 +1,7 @@
 LIBRARY "Clipswrapper"
 EXPORTS
-    GetClipsVersion @1
-    InitClips @2
+    InitClips      @1
+    ClipsBuild     @2
+    ClipsEval      @3
+    ClipsGetStr    @4
+    DeinitClips    @5
