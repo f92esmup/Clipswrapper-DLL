@@ -1,0 +1,4 @@
+LIBRARY "Clipswrapper"
+EXPORTS
+    GetClipsVersion @1
+    InitClips @2
