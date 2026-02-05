@@ -50,33 +50,55 @@ int __stdcall ClipsEval(void* env, const wchar_t* command) {
 }
 
 // 4. Obtener un valor de CLIPS como String
-// 4. Obtener un valor de CLIPS (Versión robusta para 6.42)
 void __stdcall ClipsGetStr(void* env, const wchar_t* expression, wchar_t* buffer, int bufferSize) {
-    if (env == nullptr) return;
+    if (env == nullptr || buffer == nullptr || bufferSize <= 0) return;
 
     CLIPSValue result;
-    // Evaluamos la expresión
     Eval((Environment*)env, ToAnsi(expression).c_str(), &result);
 
-    // Intentamos obtener el valor como texto independientemente del tipo
-    // Usamos la función interna de CLIPS para convertir el valor a string
-    if (result.header->type == SYMBOL_TYPE || result.header->type == STRING_TYPE || result.header->type == INSTANCE_NAME_TYPE) {
-        ToUnicode(result.lexemeValue->contents, buffer, bufferSize);
+    std::string finalStr = "";
+    unsigned short type = result.header->type;
+
+    // Caso 1: Valores simples (Símbolo, String, Instancia)
+    if (type == STRING_TYPE || type == SYMBOL_TYPE || type == INSTANCE_NAME_TYPE) {
+        finalStr = result.lexemeValue->contents;
     }
-    else if (result.header->type == FLOAT_TYPE) {
-        std::string val = std::to_string(result.floatValue->contents);
-        ToUnicode(val.c_str(), buffer, bufferSize);
+    // Caso 2: Listas (Multifield) - Recorremos todos los elementos
+    else if (type == MULTIFIELD_TYPE) {
+        for (unsigned long i = 0; i < result.multifieldValue->length; i++) {
+            auto element = result.multifieldValue->contents[i];
+
+            if (element.header->type == STRING_TYPE || element.header->type == SYMBOL_TYPE) {
+                finalStr += element.lexemeValue->contents;
+            }
+            else if (element.header->type == INTEGER_TYPE) {
+                finalStr += std::to_string(element.integerValue->contents);
+            }
+            else if (element.header->type == FLOAT_TYPE) {
+                finalStr += std::to_string(element.floatValue->contents);
+            }
+
+            // Añadimos espacio entre elementos si no es el último
+            if (i < result.multifieldValue->length - 1) finalStr += " ";
+        }
     }
-    else if (result.header->type == INTEGER_TYPE) {
-        std::string val = std::to_string(result.integerValue->contents);
-        ToUnicode(val.c_str(), buffer, bufferSize);
+    // Caso 3: Números
+    else if (type == INTEGER_TYPE) {
+        finalStr = std::to_string(result.integerValue->contents);
+    }
+    else if (type == FLOAT_TYPE) {
+        finalStr = std::to_string(result.floatValue->contents);
+    }
+    else if (type == VOID_TYPE) {
+        finalStr = "void";
     }
     else {
-        // Si es un multifield (lista) u otro, devolvemos un aviso descriptivo
-        ToUnicode("TIPO_COMPLEJO", buffer, bufferSize);
+        finalStr = "ERROR_TIPO_DESCONOCIDO";
     }
-}
 
+    // Copiamos el resultado al buffer de MQL5
+    ToUnicode(finalStr.c_str(), buffer, bufferSize);
+}
 // 5. Liberar memoria
 void __stdcall DeinitClips(void* env) {
     if (env) DestroyEnvironment((Environment*)env);
