@@ -1,16 +1,22 @@
 #include "pch.h"
-#include <windows.h> // Aseguramos que Windows esté cargado
+#define WIN32_LEAN_AND_MEAN
+#include <windows.h>
+
+// --- TRUCO DE RENOMBRADO PARA EVITAR COLISIONES ---
+// Renombramos los símbolos de CLIPS antes de incluirlos
+#define GetFocus CLIPS_GetFocus
+#define TokenType CLIPS_TokenType
+
 #include "Wrapper.h"
 #include <string>
-
-// --- TRUCO TÉCNICO ---
-// Eliminamos la definición de Windows para GetFocus 
-// antes de que CLIPS intente definir la suya.
-#undef GetFocus 
 
 extern "C" {
 #include "clips.h"
 }
+
+// Limpiamos los nombres para que no afecten al resto del proyecto
+#undef GetFocus
+#undef TokenType
 
 // Auxiliar: MQL5 (UTF-16) -> CLIPS (ANSI)
 std::string ToAnsi(const wchar_t* wstr) {
