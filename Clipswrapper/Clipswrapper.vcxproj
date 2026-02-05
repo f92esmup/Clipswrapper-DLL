@@ -323,173 +323,674 @@
     <ClInclude Include="Wrapper.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\agenda.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\analysis.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\argacces.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\bload.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\bmathfun.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\bsave.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\classcom.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\classexm.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\classfun.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\classinf.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\classini.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\classpsr.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\clsltpsr.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\commline.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\conscomp.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\constrct.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\constrnt.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\crstrtgy.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\cstrcbin.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\cstrccom.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\cstrcpsr.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\cstrnbin.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\cstrnchk.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\cstrncmp.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\cstrnops.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\cstrnpsr.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\cstrnutl.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\default.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\defins.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\developr.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\dffctbin.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\dffctbsc.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\dffctcmp.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\dffctdef.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\dffctpsr.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\dffnxbin.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\dffnxcmp.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\dffnxexe.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\dffnxfun.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\dffnxpsr.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\dfinsbin.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\dfinscmp.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\drive.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\emathfun.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\engine.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\envrnbld.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\envrnmnt.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\evaluatn.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\expressn.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\exprnbin.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\exprnops.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\exprnpsr.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\extnfunc.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\factbin.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\factbld.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\factcmp.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\factcom.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\factfile.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\factfun.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\factgen.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\facthsh.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\factlhs.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\factmch.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\factmngr.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\factprt.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\factqpsr.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\factqury.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\factrete.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\factrhs.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\filecom.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\filertr.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\fileutil.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\generate.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\genrcbin.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\genrccmp.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\genrccom.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\genrcexe.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\genrcfun.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\genrcpsr.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\globlbin.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\globlbsc.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\globlcmp.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\globlcom.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\globldef.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\globlpsr.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\immthpsr.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\incrrset.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\inherpsr.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\inscom.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\insfile.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\insfun.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\insmngr.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\insmoddp.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\insmult.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\inspsr.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\insquery.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\insqypsr.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\iofun.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\lgcldpnd.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\main.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\memalloc.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\miscfun.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\modulbin.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\modulbsc.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\modulcmp.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\moduldef.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\modulpsr.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\modulutl.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\msgcom.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\msgfun.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\msgpass.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\msgpsr.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\multifld.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\multifun.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\objbin.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\objcmp.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\objrtbin.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\objrtbld.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\objrtcmp.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\objrtfnx.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\objrtgen.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\objrtmch.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\parsefun.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\pattern.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\pprint.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\prccode.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\prcdrfun.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\prcdrpsr.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\prdctfun.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\prntutil.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\proflfun.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\reorder.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\reteutil.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\retract.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\router.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\rulebin.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\rulebld.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\rulebsc.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\rulecmp.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\rulecom.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\rulecstr.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\ruledef.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\ruledlt.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\rulelhs.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\rulepsr.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\scanner.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\sortfun.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\strngfun.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\strngrtr.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\symblbin.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\symblcmp.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\symbol.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\sysdep.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\textpro.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\tmpltbin.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\tmpltbsc.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\tmpltcmp.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\tmpltdef.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\tmpltfun.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\tmpltlhs.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\tmpltpsr.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\tmpltrhs.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\tmpltutl.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\userdata.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\userfunctions.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\utility.c" />
-    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\watch.c" />
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\agenda.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\analysis.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\argacces.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\bload.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\bmathfun.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\bsave.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\classcom.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\classexm.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\classfun.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\classinf.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\classini.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\classpsr.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\clsltpsr.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\commline.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\conscomp.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\constrct.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\constrnt.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\crstrtgy.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\cstrcbin.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\cstrccom.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\cstrcpsr.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\cstrnbin.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\cstrnchk.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\cstrncmp.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\cstrnops.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\cstrnpsr.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\cstrnutl.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\default.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\defins.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\developr.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\dffctbin.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\dffctbsc.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\dffctcmp.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\dffctdef.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\dffctpsr.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\dffnxbin.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\dffnxcmp.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\dffnxexe.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\dffnxfun.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\dffnxpsr.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\dfinsbin.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\dfinscmp.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\drive.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\emathfun.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\engine.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\envrnbld.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\envrnmnt.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\evaluatn.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\expressn.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\exprnbin.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\exprnops.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\exprnpsr.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\extnfunc.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\factbin.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\factbld.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\factcmp.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\factcom.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\factfile.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\factfun.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\factgen.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\facthsh.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\factlhs.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\factmch.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\factmngr.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\factprt.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\factqpsr.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\factqury.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\factrete.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\factrhs.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\filecom.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\filertr.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\fileutil.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\generate.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\genrcbin.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\genrccmp.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\genrccom.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\genrcexe.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\genrcfun.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\genrcpsr.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\globlbin.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\globlbsc.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\globlcmp.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\globlcom.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\globldef.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\globlpsr.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\immthpsr.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\incrrset.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\inherpsr.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\inscom.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\insfile.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\insfun.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\insmngr.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\insmoddp.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\insmult.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\inspsr.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\insquery.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\insqypsr.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\iofun.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\lgcldpnd.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\main.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\memalloc.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\miscfun.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\modulbin.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\modulbsc.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\modulcmp.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\moduldef.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\modulpsr.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\modulutl.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\msgcom.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\msgfun.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\msgpass.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\msgpsr.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\multifld.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\multifun.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\objbin.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\objcmp.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\objrtbin.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\objrtbld.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\objrtcmp.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\objrtfnx.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\objrtgen.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\objrtmch.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\parsefun.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\pattern.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\pprint.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\prccode.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\prcdrfun.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\prcdrpsr.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\prdctfun.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\prntutil.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\proflfun.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\reorder.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\reteutil.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\retract.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\router.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\rulebin.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\rulebld.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\rulebsc.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\rulecmp.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\rulecom.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\rulecstr.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\ruledef.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\ruledlt.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\rulelhs.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\rulepsr.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\scanner.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\sortfun.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\strngfun.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\strngrtr.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\symblbin.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\symblcmp.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\symbol.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\sysdep.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\textpro.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\tmpltbin.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\tmpltbsc.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\tmpltcmp.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\tmpltdef.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\tmpltfun.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\tmpltlhs.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\tmpltpsr.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\tmpltrhs.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\tmpltutl.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\userdata.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\userfunctions.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\utility.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\clips_core_source_642\clips_core_source_642\core\watch.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
     <ClCompile Include="dllmain.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
