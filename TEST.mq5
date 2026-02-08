@@ -1,106 +1,72 @@
-//+------------------------------------------------------------------+
-//|                                        TestClipsUniversal.mq5    |
-//|                                  Copyright 2026, Pedro Escudero  |
-//|                                             https://mql5.com     |
-//+------------------------------------------------------------------+
-#property copyright "Pedro Escudero"
-#property link      "https://mql5.com"
-#property version   "1.00"
-#property strict
+﻿#property strict
 
-// --- IMPORTACIÓN DE LA DLL ---
 #import "Clipswrapper.dll"
    long InitClips();
    int  ClipsBuild(long env, string construct);
    int  ClipsEval(long env, string command);
    void ClipsGetStr(long env, string expression, string &buffer, int bufferSize);
-   void ClipsGetOutput(string &buffer, int bufferSize); // <--- Nueva función de Log
+   void ClipsGetOutput(string &buffer, int bufferSize);
    void DeinitClips(long env);
 #import
 
-//+------------------------------------------------------------------+
-//| Script program start function                                    |
-//+------------------------------------------------------------------+
-void OnStart()
-{
-   Print("=== INICIANDO AUDITORÍA DEL MOTOR CLIPS ===");
+long clipsEnv = 0;
 
-   // 1. Inicialización de instancia
-   long env = InitClips();
-   if(env == 0)
-   {
-      Print("ERROR CRÍTICO:: No se pudo inicializar la DLL.");
-      return;
-   }
+int OnInit() {
+    Print("=== INICIANDO AUDITORÍA DE CLIPS DLL ===");
+    
+    // 1. TEST: InitClips (Inicialización)
+    clipsEnv = InitClips();
+    if(clipsEnv == 0) {
+        Print("CRÍTICO: No se pudo obtener puntero de entorno.");
+        return INIT_FAILED;
+    }
+    Print("OK: InitClips -> Puntero: ", clipsEnv);
 
-   // --- TEST 1: CAPTURA DE ERRORES (EL "LOG" DEL MOTOR) ---
-   Print("\n--- TEST 1: Depuración de errores de sintaxis ---");
-   // Provocamos error: Falta cerrar el paréntesis de la regla
-   int buildRes = ClipsBuild(env, "(defrule Regla_Con_Error (dato ?x) => (printout t \"Hola\") ");
-   
-   if(buildRes <= 0) 
-   {
-      Print("ADVERTENCIA:: El motor rechazó la construcción. Consultando causa...");
-      ShowClipsLog(); // <--- Aquí es donde capturamos el mensaje de error
-   }
+    // 2. TEST: ClipsBuild (Capacidad de Aprendizaje/Estructura)
+    // Definimos un template para la cuenta y una regla de razonamiento
+    int b1 = ClipsBuild(clipsEnv, "(deftemplate account (slot balance) (slot risk))");
+    int b2 = ClipsBuild(clipsEnv, "(deftemplate recommendation (slot lots))");
+    
+    // REGLA DE RAZONAMIENTO: "Si el balance > 1000 y el riesgo es alto, lotaje = 0.5"
+    string rule = "(defrule calculate-risk "
+                  "  (account (balance ?b&:(> ?b 1000)) (risk high)) "
+                  "  => "
+                  "  (assert (recommendation (lots 0.5))) "
+                  "  (printout t \"Regla disparada: Riesgo Alto detectado.\" crlf))";
+    int b3 = ClipsBuild(clipsEnv, rule);
 
-   // --- TEST 2: AISLAMIENTO DE INSTANCIAS ---
-   Print("\n--- TEST 2: Verificando independencia de instancias ---");
-   long env2 = InitClips();
-   
-   ClipsBuild(env,  "(defglobal ?*instancia* = \"Soy el Cerebro A\")");
-   ClipsBuild(env2, "(defglobal ?*instancia* = \"Soy el Cerebro B\")");
-   
-   string resA = "                    ";
-   string resB = "                    ";
-   
-   ClipsGetStr(env,  "?*instancia*", resA, 20);
-   ClipsGetStr(env2, "?*instancia*", resB, 20);
-   
-   Print("Instancia 1 dice: ", resA);
-   Print("Instancia 2 dice: ", resB);
-   
-   DeinitClips(env2); // Cerramos la segunda instancia
+    PrintFormat("OK: ClipsBuild -> T1:%d T2:%d R1:%d (0 = OK)", b1, b2, b3);
 
-   // --- TEST 3: MANEJO DE LISTAS (MULTIFIELD) ---
-   Print("\n--- TEST 3: Recuperación de listas complejas ---");
-   ClipsEval(env, "(clear)"); // Limpiamos env
-   ClipsBuild(env, "(deftemplate sensor (multislot valores))");
-   ClipsEval(env, "(assert (sensor (valores 1.0950 1.0965 1.0942 SELL \"Strong\")))");
-   
-   string multifieldRes;
-   StringInit(multifieldRes, 100, 0);
-   string query = "(fact-slot-value (nth$ 1 (find-all-facts ((?f sensor)) TRUE)) valores)";
-   
-   ClipsGetStr(env, query, multifieldRes, 100);
-   Print("Datos recuperados de la lista: ", multifieldRes);
+    // 3. TEST: ClipsEval & Memoria (Inyección de Hechos)
+    ClipsEval(clipsEnv, "(reset)");
+    // Inyectamos datos de "memoria"
+    ClipsEval(clipsEnv, "(assert (account (balance 5000) (risk high)))");
+    
+    // Verificamos si CLIPS recuerda el hecho antes de correr la inferencia
+    string memCheck; StringInit(memCheck, 128, ' ');
+    ClipsGetStr(clipsEnv, "(find-all-facts ((?f account)) TRUE)", memCheck, 128);
+    Print("OK: Memoria (Facts antes de run): ", memCheck);
 
-   // --- TEST 4: COMANDO PRINTOUT INTERNO ---
-   Print("\n--- TEST 4: Verificación de salida stdout ---");
-   ClipsEval(env, "(printout stdout \"[LOG INTERNO]: Razonamiento completado con éxito.\" crlf)");
-   ShowClipsLog();
+    // 4. TEST: Razonamiento (Inferencia)
+    int fired = ClipsEval(clipsEnv, "(run)");
+    Print("OK: ClipsEval(run) -> Reglas ejecutadas: ", fired);
 
-   // --- LIMPIEZA FINAL ---
-   DeinitClips(env);
-   Print("\n=== AUDITORÍA FINALIZADA CON ÉXITO ===");
-}
+    // 5. TEST: ClipsGetStr (Recuperación de Deducción)
+    string finalResult; StringInit(finalResult, 128, ' ');
+    ClipsGetStr(clipsEnv, "(find-all-facts ((?f recommendation)) TRUE)", finalResult, 128);
+    Print("OK: Razonamiento (Deducción final): ", finalResult);
 
-//+------------------------------------------------------------------+
-//| Función Auxiliar: Lee y limpia el buffer de salida de la DLL     |
-//+------------------------------------------------------------------+
-void ShowClipsLog()
-{
-   string logger;
-   StringInit(logger, 1024, 0); // Reservamos 1KB para logs
-   
-   ClipsGetOutput(logger, 1024);
-   
-   // Limpiamos espacios innecesarios
-   StringTrimLeft(logger);
-   StringTrimRight(logger);
-   
-   if(StringLen(logger) > 0)
-   {
-      Print("MENSAJE DEL MOTOR:\n", logger);
-   }
+    // 6. TEST: ClipsGetOutput (Captura de Router)
+    // Debería capturar el "printout" que definimos en la regla
+    string clipsLog; StringInit(clipsLog, 500, ' ');
+    ClipsGetOutput(clipsLog, 500);
+    Print("OK: ClipsGetOutput (Logs del motor): ", clipsLog);
+
+    Print("=== AUDITORÍA FINALIZADA CON ÉXITO ===");
+    
+    // 7. TEST: DeinitClips (Liberación)
+    DeinitClips(clipsEnv);
+    clipsEnv = 0;
+
+    return INIT_FAILED; // Detenemos el EA tras el test
 }
