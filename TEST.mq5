@@ -1,72 +1,70 @@
-﻿#property strict
+﻿//+------------------------------------------------------------------+
+//|                                              AuditoriaClips.mq5 |
+//|                                  Copyright 2026, Pedro Escudero  |
+//+------------------------------------------------------------------+
+#property strict
 
-#import "Clipswrapper.dll"
-   long InitClips();
-   int  ClipsBuild(long env, string construct);
-   int  ClipsEval(long env, string command);
-   void ClipsGetStr(long env, string expression, string &buffer, int bufferSize);
-   void ClipsGetOutput(string &buffer, int bufferSize);
-   void DeinitClips(long env);
-#import
-
-long clipsEnv = 0;
+// Incluimos la definición de la clase
+#include <clips.mqh> 
 
 int OnInit() {
-    Print("=== INICIANDO AUDITORÍA DE CLIPS DLL ===");
+    Print("=== INICIANDO AUDITORÍA DE CLIPS DLL (MODO CLASE) ===");
     
-    // 1. TEST: InitClips (Inicialización)
-    clipsEnv = InitClips();
-    if(clipsEnv == 0) {
-        Print("CRÍTICO: No se pudo obtener puntero de entorno.");
+    // 1. TEST: Inicialización (Constructor)
+    // El constructor invoca internamente a InitClips()
+    CClipsEngine engine; 
+    
+    if(!engine.IsReady()) {
+        Print("CRÍTICO: No se pudo obtener el handle del entorno.");
         return INIT_FAILED;
     }
-    Print("OK: InitClips -> Puntero: ", clipsEnv);
+    Print("OK: Motor inicializado correctamente.");
 
-    // 2. TEST: ClipsBuild (Capacidad de Aprendizaje/Estructura)
-    // Definimos un template para la cuenta y una regla de razonamiento
-    int b1 = ClipsBuild(clipsEnv, "(deftemplate account (slot balance) (slot risk))");
-    int b2 = ClipsBuild(clipsEnv, "(deftemplate recommendation (slot lots))");
+    // 2. TEST: ClipsBuild (Definición de Lógica)
+    // Definimos templates y reglas
+    bool b1 = engine.Build("(deftemplate account (slot balance) (slot risk))");
+    bool b2 = engine.Build("(deftemplate recommendation (slot lots))");
     
-    // REGLA DE RAZONAMIENTO: "Si el balance > 1000 y el riesgo es alto, lotaje = 0.5"
     string rule = "(defrule calculate-risk "
                   "  (account (balance ?b&:(> ?b 1000)) (risk high)) "
                   "  => "
                   "  (assert (recommendation (lots 0.5))) "
                   "  (printout t \"Regla disparada: Riesgo Alto detectado.\" crlf))";
-    int b3 = ClipsBuild(clipsEnv, rule);
+    
+    bool b3 = engine.Build(rule);
 
-    PrintFormat("OK: ClipsBuild -> T1:%d T2:%d R1:%d (0 = OK)", b1, b2, b3);
+    PrintFormat("OK: Build de Estructuras -> T1:%s T2:%s R1:%s", 
+                (string)b1, (string)b2, (string)b3);
 
     // 3. TEST: ClipsEval & Memoria (Inyección de Hechos)
-    ClipsEval(clipsEnv, "(reset)");
-    // Inyectamos datos de "memoria"
-    ClipsEval(clipsEnv, "(assert (account (balance 5000) (risk high)))");
+    engine.Eval("(reset)");
+    engine.Eval("(assert (account (balance 5000) (risk high)))");
     
-    // Verificamos si CLIPS recuerda el hecho antes de correr la inferencia
-    string memCheck; StringInit(memCheck, 128, ' ');
-    ClipsGetStr(clipsEnv, "(find-all-facts ((?f account)) TRUE)", memCheck, 128);
+    // Verificamos si CLIPS recuerda el hecho usando GetStr
+    string memCheck = engine.GetStr("(find-all-facts ((?f account)) TRUE)");
     Print("OK: Memoria (Facts antes de run): ", memCheck);
 
     // 4. TEST: Razonamiento (Inferencia)
-    int fired = ClipsEval(clipsEnv, "(run)");
-    Print("OK: ClipsEval(run) -> Reglas ejecutadas: ", fired);
+    // Eval devuelve el número de reglas disparadas
+    int fired = engine.Run(); 
+    Print("OK: Eval(run) -> Reglas ejecutadas: ", fired);
 
-    // 5. TEST: ClipsGetStr (Recuperación de Deducción)
-    string finalResult; StringInit(finalResult, 128, ' ');
-    ClipsGetStr(clipsEnv, "(find-all-facts ((?f recommendation)) TRUE)", finalResult, 128);
+    // 5. TEST: GetStr (Recuperación de Deducción)
+    // Extraemos el resultado de la recomendación calculada
+    string finalResult = engine.GetStr("(find-all-facts ((?f recommendation)) TRUE)");
     Print("OK: Razonamiento (Deducción final): ", finalResult);
 
-    // 6. TEST: ClipsGetOutput (Captura de Router)
-    // Debería capturar el "printout" que definimos en la regla
-    string clipsLog; StringInit(clipsLog, 500, ' ');
-    ClipsGetOutput(clipsLog, 500);
-    Print("OK: ClipsGetOutput (Logs del motor): ", clipsLog);
+    // 6. TEST: GetLog (Captura de Router)
+    // Recupera lo que el motor imprimió con 'printout'
+    string clipsLog = engine.GetLog();
+    Print("OK: Logs del motor (Router): ", clipsLog);
 
     Print("=== AUDITORÍA FINALIZADA CON ÉXITO ===");
     
-    // 7. TEST: DeinitClips (Liberación)
-    DeinitClips(clipsEnv);
-    clipsEnv = 0;
-
-    return INIT_FAILED; // Detenemos el EA tras el test
+    // 7. TEST: Liberación (Destructor)
+    // No hace falta llamar a DeinitClips; ocurre automáticamente al salir de OnInit.
+    return INIT_FAILED; 
 }
+
+void OnDeinit(const int reason) {}
+void OnTick() {}
