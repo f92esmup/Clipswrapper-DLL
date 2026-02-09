@@ -17,96 +17,102 @@ extern "C" {
 #undef GetFocus
 #undef TokenType
 
-// Buffer global para capturar la salida de CLIPS
-std::stringstream clips_output_stream;
+// --- ESTRUCTURA DE CONTEXTO ---
+// Encapsula el entorno y su buffer de salida para aislamiento total
+struct ClipsInstance {
+    Environment* env = nullptr;
+    std::stringstream output_stream;
+};
 
-// --- FUNCIONES DEL ROUTER (Captura de logs) ---
+// --- FUNCIONES DEL ROUTER (Contextualizadas) ---
 extern "C" {
     bool QueryRouter(Environment* env, const char* logicalName, void* context) {
         return true;
     }
 
     void WriteRouter(Environment* env, const char* logicalName, const char* str, void* context) {
-        clips_output_stream << str;
+        if (context) {
+            // Recuperamos la instancia específica a través del puntero de contexto
+            ClipsInstance* instance = static_cast<ClipsInstance*>(context);
+            instance->output_stream << str;
+        }
     }
 }
 
 // --- AUXILIARES DE CONVERSIÓN ---
 
-// Corregido: Ahora excluye el terminador nulo del tamaño del std::string
 std::string ToAnsi(const wchar_t* wstr) {
     if (!wstr || wstr[0] == L'\0') return "";
     int size = WideCharToMultiByte(CP_ACP, 0, wstr, -1, NULL, 0, NULL, NULL);
     if (size <= 1) return "";
 
-    // Restamos 1 para que el objeto string de C++ tenga el tamaño real
     std::string str(size - 1, 0);
     WideCharToMultiByte(CP_ACP, 0, wstr, -1, &str[0], size, NULL, NULL);
     return str;
 }
 
 void ToUnicode(const char* src, wchar_t* dest, int maxLen) {
-    if (!src || !dest) return;
+    if (!src || !dest || maxLen <= 0) return;
     MultiByteToWideChar(CP_ACP, 0, src, -1, dest, maxLen);
 }
 
 // --- API EXPORTADA ---
 
 void* __stdcall InitClips() {
-    Environment* env = CreateEnvironment();
-    // Registro del Router para capturar errores de sintaxis y mensajes de printout
-    AddRouter(env, "MQL5Router", 10, QueryRouter, WriteRouter, NULL, NULL, NULL, NULL);
-    return env;
+    // 1. Reservar memoria para nuestra estructura de control
+    ClipsInstance* instance = new ClipsInstance();
+
+    // 2. Crear el entorno de CLIPS
+    instance->env = CreateEnvironment();
+
+    // Si CreateEnvironment fallara, al menos env no tendría basura de memoria
+    if (instance->env == nullptr) {
+        delete instance;
+        return nullptr;
+    }
+    // 3. Registrar el Router pasando la dirección de 'instance' como contexto (6º parámetro)
+    AddRouter(instance->env, "MQL5Router", 10, QueryRouter, WriteRouter, NULL, NULL, NULL, instance);
+
+    return instance; // Retornamos el puntero a nuestra estructura (el "handle")
 }
 
-int __stdcall ClipsBuild(void* env, const wchar_t* construct) {
-    if (env == nullptr) return -1;
-    // Build devuelve 1 en éxito, 0 en error
-    return Build((Environment*)env, ToAnsi(construct).c_str());
+int __stdcall ClipsBuild(void* handle, const wchar_t* construct) {
+    if (!handle) return -1;
+    ClipsInstance* instance = static_cast<ClipsInstance*>(handle);
+    return Build(instance->env, ToAnsi(construct).c_str());
 }
 
-int __stdcall ClipsEval(void* env, const wchar_t* command) {
-    if (env == nullptr) return -1;
-    // Eval devuelve 0 (EE_NO_ERROR) si el comando es válido
-    return (int)Eval((Environment*)env, ToAnsi(command).c_str(), NULL);
+int __stdcall ClipsEval(void* handle, const wchar_t* command) {
+    if (!handle) return -1;
+    ClipsInstance* instance = static_cast<ClipsInstance*>(handle);
+    return (int)Eval(instance->env, ToAnsi(command).c_str(), NULL);
 }
 
-void __stdcall ClipsGetStr(void* env, const wchar_t* expression, wchar_t* buffer, int bufferSize) {
-    if (env == nullptr || buffer == nullptr || bufferSize <= 0) return;
+void __stdcall ClipsGetStr(void* handle, const wchar_t* expression, wchar_t* buffer, int bufferSize) {
+    if (!handle || !buffer || bufferSize <= 0) return;
 
-    Environment* clipsEnv = (Environment*)env;
+    ClipsInstance* instance = static_cast<ClipsInstance*>(handle);
     CLIPSValue result;
 
-    // Eval en CLIPS 6.42 devuelve un código de error (0 = EE_NO_ERROR)
-    int error = (int)Eval(clipsEnv, ToAnsi(expression).c_str(), &result);
+    int error = (int)Eval(instance->env, ToAnsi(expression).c_str(), &result);
 
     std::string finalStr = "";
-
     if (error != 0) {
         finalStr = "EVAL_ERROR";
     }
     else {
         unsigned short type = result.header->type;
 
-        // --- MANEJO DE TIPOS SIMPLES ---
-        if (type == STRING_TYPE || type == SYMBOL_TYPE || type == INSTANCE_NAME_TYPE) {
+        if (type == STRING_TYPE || type == SYMBOL_TYPE || type == INSTANCE_NAME_TYPE)
             finalStr = result.lexemeValue->contents;
-        }
-        else if (type == INTEGER_TYPE) {
+        else if (type == INTEGER_TYPE)
             finalStr = std::to_string(result.integerValue->contents);
-        }
-        else if (type == FLOAT_TYPE) {
+        else if (type == FLOAT_TYPE)
             finalStr = std::to_string(result.floatValue->contents);
-        }
-        else if (type == FACT_ADDRESS_TYPE) {
-            // Crucial para find-all-facts: devuelve el índice del hecho <Fact-X>
+        else if (type == FACT_ADDRESS_TYPE)
             finalStr = "<Fact-" + std::to_string(result.factValue->factIndex) + ">";
-        }
-        else if (type == INSTANCE_ADDRESS_TYPE) {
+        else if (type == INSTANCE_ADDRESS_TYPE)
             finalStr = "<Instance-" + std::string(result.instanceValue->name->contents) + ">";
-        }
-
-        // --- MANEJO DE MULTIFIELDS (LISTAS) ---
         else if (type == MULTIFIELD_TYPE) {
             for (unsigned long i = 0; i < result.multifieldValue->length; i++) {
                 auto element = result.multifieldValue->contents[i];
@@ -122,32 +128,37 @@ void __stdcall ClipsGetStr(void* env, const wchar_t* expression, wchar_t* buffer
                     finalStr += "<Fact-" + std::to_string(element.factValue->factIndex) + ">";
                 else if (eType == INSTANCE_ADDRESS_TYPE)
                     finalStr += "<Instance-" + std::string(element.instanceValue->name->contents) + ">";
-                else
-                    finalStr += "UNKNOWN";
 
-                // Añadir espacio entre elementos de la lista
                 if (i < result.multifieldValue->length - 1) finalStr += " ";
             }
         }
-        else if (type == VOID_TYPE) {
-            finalStr = "void";
-        }
         else {
-            finalStr = "N/A";
+            finalStr = (type == VOID_TYPE) ? "void" : "N/A";
         }
     }
 
-    // Convertir la cadena final de ANSI a Unicode para MQL5
     ToUnicode(finalStr.c_str(), buffer, bufferSize);
 }
 
-void __stdcall ClipsGetOutput(wchar_t* buffer, int bufferSize) {
-    std::string out = clips_output_stream.str();
+void __stdcall ClipsGetOutput(void* handle, wchar_t* buffer, int bufferSize) {
+    if (!handle || !buffer) return;
+
+    ClipsInstance* instance = static_cast<ClipsInstance*>(handle);
+    std::string out = instance->output_stream.str();
+
     ToUnicode(out.c_str(), buffer, bufferSize);
-    clips_output_stream.str("");
-    clips_output_stream.clear();
+
+    // Limpiar el buffer específico de esta instancia
+    instance->output_stream.str("");
+    instance->output_stream.clear();
 }
 
-void __stdcall DeinitClips(void* env) {
-    if (env) DestroyEnvironment((Environment*)env);
+void __stdcall DeinitClips(void* handle) {
+    if (handle) {
+        ClipsInstance* instance = static_cast<ClipsInstance*>(handle);
+        // 1. Destruir entorno CLIPS
+        DestroyEnvironment(instance->env);
+        // 2. Liberar la estructura contenedora
+        delete instance;
+    }
 }
